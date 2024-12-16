@@ -1,22 +1,22 @@
-# sfetch - suckless fetching utility
+# cfetch - A system information fetching utility written in pure C
 
 .POSIX:
 
 include config.mk
 
-all: sfetch
+all: cfetch
 
 config.h:
 	cp config.def.h config.h
 
-sfetch: $(SRC)
+cfetch: $(SRC)
 	$(CC) $(SRC) -o sfetch
 	
-install: sfetch
+install: cfetch
 	cp $(TARGETBIN) $(DESTDIR)
 
 clean:
 	rm -rf $(TARGETBIN)
 
 uninstall:
-	rm $(DESTDIR)/sfetch
+	rm $(DESTDIR)/cfetch

@@ -10,4 +10,4 @@ DESTDIR = /usr/local/bin
 CC = gcc
 
 # Binary after gcc compiled the new program.
-TARGETBIN = ./sfetch
+TARGETBIN = ./cfetch
